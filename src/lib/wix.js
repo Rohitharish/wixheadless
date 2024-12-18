@@ -1,10 +1,11 @@
 import { createClient, OAuthStrategy } from "@wix/sdk";
 import { items } from "@wix/data";
+import { CLIENT_ID } from "../constants/constants";
 
 const client = createClient({
   modules: { items },
   auth: OAuthStrategy({
-    clientId: import.meta.env.VITE_CLIENT_ID,
+    clientId: CLIENT_ID,
   }),
 });
 
